@@ -1,0 +1,102 @@
+body{
+    background-color: rgb(135, 142, 145);
+}
+.element{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin: 150px auto ;
+    
+}
+.beeline{
+    position: relative;
+    background-color: black;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+.beeline::before{
+    position: absolute;
+    content: '';
+    width: 300px;
+    height: 60px;
+    background-color: yellow;
+    top: 20%;
+}
+.beeline::after{
+    position: absolute;
+    content: '';
+    background-color: yellow;
+    top: 60%;
+    width: 300px;
+    height: 60px;
+    
+}
+.yandex{
+    position: relative;
+    background-color: yellow;
+    width: 300px;
+    height: 300px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.yandex::before{
+    content: '';
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+}
+.yandex::after{
+    content: '';
+    width: 150px;
+    height: 150px;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.trello{
+    position: relative;
+    background-color: white;
+    width: 300px;
+    height: 300px;
+    border-radius: 30px;
+}
+.trello:before{
+    position: absolute;
+    content: '';
+    width: 75px ;
+    height: 180px;
+    background-color: rgb(2, 125, 207);
+    margin-top: 17%;
+    margin-left: 17%;
+    border-radius: 12px;
+}
+.trello:after{
+    position: absolute;
+    content: '';
+    width: 75px ;
+    height: 100px;
+    background-color: rgb(2, 125, 207);
+    top: 17%;
+    right: 17%;
+    border-radius: 12px;
+
+}
+
+
+@media screen and (max-width: 800px){
+    .element{
+        flex-direction: column;
+        position: absolute;
+        margin: 10%
+        
+    }
+    
+}
